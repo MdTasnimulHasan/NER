@@ -9,7 +9,8 @@ from sklearn.metrics import accuracy_score
 from simpletransformers.ner import NERModel, NERArgs
 
 drive.mount('/content/drive')
-# change to dataset path here
+# Download dataset from here: https://www.kaggle.com/datasets/meharihailemariam/ner-datasetcsv
+# Change to dataset path here
 data = pd.read_csv("/content/drive/MyDrive/NER_dataset/ner_dataset.csv", encoding = "latin1")
 data = data.fillna(method="ffill")
 data["Sentence #"] = LabelEncoder().fit_transform(data["Sentence #"])
