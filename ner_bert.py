@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from simpletransformers.ner import NERModel, NERArgs
 
-
+# download data from https://www.kaggle.com/datasets/meharihailemariam/ner-datasetcsv
 data = pd.read_csv("E:\\Tasnim\\named_entity_recognition\\ner_dataset.csv", encoding = "latin1")
 data = data.fillna(method="ffill")
 data["Sentence #"] = LabelEncoder().fit_transform(data["Sentence #"])
