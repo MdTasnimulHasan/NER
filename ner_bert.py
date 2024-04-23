@@ -7,7 +7,9 @@ from sklearn.metrics import accuracy_score
 from simpletransformers.ner import NERModel, NERArgs
 
 # download data from https://www.kaggle.com/datasets/meharihailemariam/ner-datasetcsv
-data = pd.read_csv("E:\\Tasnim\\named_entity_recognition\\ner_dataset.csv", encoding = "latin1")
+drive.mount('/content/drive')
+data = pd.read_csv("/content/drive/MyDrive/NER_dataset/ner_dataset.csv", encoding = "latin1")
+
 data = data.fillna(method="ffill")
 data["Sentence #"] = LabelEncoder().fit_transform(data["Sentence #"])
 data.rename(columns={"Sentence #":"sentence_id", "Word":"words","Tag":"labels"}, inplace = True)
