@@ -33,3 +33,18 @@ model.train_model(train_data,eval_data=test_data,acc=accuracy_score)
 result, model_outputs, preds_list = model.eval_model(test_data)
 prediction, model_output = model.predict(["Japan has a lot of mountains. Most famous one is Fujiyama."])
 print(prediction)
+
+'''
+Output:
+[[{'Japan': 'B-GEO'},
+  {'has': 'O'},
+  {'a': 'O'},
+  {'lot': 'O'},
+  {'of': 'O'},
+  {'mountains.': 'O'},
+  {'Most': 'O'},
+  {'famous': 'O'},
+  {'one': 'O'},
+  {'is': 'O'},
+  {'Fujiyama.': 'B-GEO'}]]
+'''
