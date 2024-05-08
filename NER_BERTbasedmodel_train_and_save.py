@@ -35,7 +35,7 @@ model.train_model(train_data,eval_data=test_data,acc=accuracy_score)
 
 result, model_outputs, preds_list = model.eval_model(test_data)
 
-model_savepath = "/content/drive/MyDrive/NER_dataset/NER_model_01.pt"
+model_savepath = "/content/drive/MyDrive/NER_dataset/NER_model.pt"
 torch.save(model, model_savepath)
 
 prediction, model_output = model.predict(["Japan has a lot of mountains. Most famous one is Fujiyama.", "This is  near Kawaguchiko"])
