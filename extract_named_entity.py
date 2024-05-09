@@ -115,7 +115,7 @@ def main():
     
     model = torch.load(args.model_path)
 
-    model.eval()
+    # model.eval()
     
     prediction, model_output = model.predict(sentences)
     
