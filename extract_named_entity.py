@@ -114,6 +114,8 @@ def main():
     sentences = extract_sentences_from_file(cleansed_txt_file_path)
     
     model = torch.load(args.model_path)
+
+    model.eval()
     
     prediction, model_output = model.predict(sentences)
     
